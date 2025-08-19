@@ -16,14 +16,14 @@ variable "site_name_prefix" {
 #   default     = ""
 # }
 
-# variable "github_token" {
-#   description = "Your GitHub personal access token"
-#   type        = string
-#   sensitive   = true
-# }
+variable "github_token" {
+  description = "Your GitHub personal access token"
+  type        = string
+  sensitive   = true
+}
 
-# variable "netlify_token" {
-#   description = "Your Netlify personal access token"
-#   type        = string
-#   sensitive   = true
-# }
+variable "netlify_token" {
+  description = "Your Netlify personal access token"
+  type        = string
+  sensitive   = true
+}

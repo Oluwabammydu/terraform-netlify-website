@@ -10,6 +10,6 @@ resource "netlify_site" "main" {
     repo_branch = "main"
     provider    = "github"
     repo_path   = "Oluwabammydu/terraform-netlify-website"
-    publish_dir = "site"
+    publish_path = "site"
   }
 }
