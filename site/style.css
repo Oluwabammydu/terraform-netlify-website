@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Animated space background */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><defs><radialGradient id="star"><stop offset="0%" stop-color="white" stop-opacity="1"/><stop offset="100%" stop-color="white" stop-opacity="0"/></radialGradient></defs><circle cx="20" cy="20" r="1" fill="url(%23star)"/><circle cx="80" cy="80" r="0.5" fill="url(%23star)"/><circle cx="150" cy="30" r="1" fill="url(%23star)"/><circle cx="40" cy="120" r="0.5" fill="url(%23star)"/><circle cx="170" cy="140" r="1" fill="url(%23star)"/></svg>') repeat;
+    animation: moveStars 60s linear infinite;
+    z-index: -2;
+}
+
+.twinkling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><circle cx="25" cy="25" r="0.5" fill="white" opacity="0.8"><animate attributeName="opacity" values="0.8;0.2;0.8" dur="3s" repeatCount="indefinite"/></circle><circle cx="75" cy="75" r="0.3" fill="white" opacity="0.6"><animate attributeName="opacity" values="0.6;0.1;0.6" dur="2s" repeatCount="indefinite"/></circle></svg>') repeat;
+    animation: moveStars 40s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveStars {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100vh); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Header Styles */
+header .logo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.terraform-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#site-title {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, #00d4ff, #ff6b6b, #4ecdc4, #45b7d1);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 4s ease-in-out infinite;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #888;
+    margin-bottom: 2rem;
+}
+
+/* Mission Control Dashboard */
+.mission-control {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.status-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+}
+
+.status-card .icon {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.status-card .status {
+    color: #00ff88;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* Explorer Section */
+.explorer-section {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coordinates {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.coord-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coord-item .label {
+    color: #888;
+}
+
+.coord-item .value {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* Terraform Poem */
+.terraform-poem {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.poem-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: #ccc;
+}
+
+/* Achievement Grid */
+.achievement-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement:hover {
+    transform: scale(1.02);
+}
+
+.achievement .medal {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.achievement h4 {
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+}
+
+/* Terminal */
+.terminal {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+    background: #333;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.btn.red { background: #ff5f57; }
+.btn.yellow { background: #ffbd2e; }
+.btn.green { background: #28ca42; }
+
+.title {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.terminal-body {
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+}
+
+.command-line {
+    margin-bottom: 0.5rem;
+}
+
+.prompt {
+    color: #00ff88;
+    margin-right: 0.5rem;
+}
+
+.command {
+    color: #fff;
+}
+
+.output .success {
+    color: #00ff88;
+}
+
+/* Typography */
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #00d4ff;
+}
+
+/* Fun Facts */
+.fun-facts {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Terminal Commands */
+.terraform-commands {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    color: #888;
+}
+
+.build-info {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+#build-id {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    #site-title {
+        font-size: 2.5rem;
+    }
+    
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .coord-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Typing animation */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#typing-command {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(40, end) infinite;
+}

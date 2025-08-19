@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TerraVerse Explorer | Infrastructure Galaxy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="terraform-icon">🏗️</div>
+                <h1 id="site-title">TerraVerse Explorer</h1>
+                <p class="subtitle">Navigate the Infrastructure Galaxy</p>
+            </div>
+        </header>
+        
+        <main>
+            <div class="mission-control">
+                <h2>🚀 Mission Control Dashboard</h2>
+                <div class="status-grid">
+                    <div class="status-card terraform">
+                        <div class="icon">⚡</div>
+                        <div class="info">
+                            <h3>Terraform Engine</h3>
+                            <p class="status">OPERATIONAL</p>
+                        </div>
+                    </div>
+                    <div class="status-card hcp">
+                        <div class="icon">☁️</div>
+                        <div class="info">
+                            <h3>HCP Remote Base</h3>
+                            <p class="status">CONNECTED</p>
+                        </div>
+                    </div>
+                    <div class="status-card netlify">
+                        <div class="icon">🌐</div>
+                        <div class="info">
+                            <h3>Netlify Station</h3>
+                            <p class="status">DEPLOYED</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="explorer-section">
+                <h2>🌌 Galactic Coordinates</h2>
+                <div class="coordinates">
+                    <div class="coord-item">
+                        <span class="label">Launch Time:</span>
+                        <span id="timestamp" class="value">Calculating...</span>
+                    </div>
+                    <div class="coord-item">
+                        <span class="label">Galaxy Sector:</span>
+                        <span class="value">Netlify Nebula</span>
+                    </div>
+                    <div class="coord-item">
+                        <span class="label">Mission Code:</span>
+                        <span id="mission-code" class="value">TF-DEPLOY-2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terraform-poem">
+                <h2>📜 The Infrastructure Manifesto</h2>
+                <div class="poem-content">
+                    <p><em>"In the realm where code meets cloud,<br>
+                    Where infrastructure speaks proud,<br>
+                    Terraform scripts dance in the night,<br>
+                    Bringing resources to digital light."</em></p>
+                    
+                    <p><em>"From variables declared with care,<br>
+                    To outputs that knowledge share,<br>
+                    State files locked in HCP's embrace,<br>
+                    While Netlify gives our site its place."</em></p>
+                </div>
+            </div>
+
+            <div class="fun-facts">
+                <h2>🎯 Mission Achievements</h2>
+                <div class="achievement-grid">
+                    <div class="achievement">
+                        <div class="medal">🏆</div>
+                        <div class="text">
+                            <h4>Infrastructure as Code Master</h4>
+                            <p>Successfully deployed using declarative configuration</p>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <div class="medal">🔐</div>
+                        <div class="text">
+                            <h4>Security Guardian</h4>
+                            <p>Zero secrets exposed in repository</p>
+                        </div>
+                    </div>
+                    <div class="achievement">
+                        <div class="medal">⚡</div>
+                        <div class="text">
+                            <h4>Speed Demon</h4>
+                            <p>Deployed in less than <span id="deploy-speed">60</span> seconds</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="terraform-commands">
+                <h2>🖥️ Explorer Commands</h2>
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="buttons">
+                            <span class="btn red"></span>
+                            <span class="btn yellow"></span>
+                            <span class="btn green"></span>
+                        </div>
+                        <span class="title">terraform@explorer:~$</span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="command-line">
+                            <span class="prompt">$</span>
+                            <span class="command" id="typing-command">terraform apply -auto-approve</span>
+                        </div>
+                        <div class="output">
+                            <span class="success">✅ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="footer-content">
+                <p>🌟 Crafted in the TerraVerse with Infrastructure Magic</p>
+                <p class="build-info">Build ID: <span id="build-id">TF-BUILD-RANDOM</span> | 
+                   Powered by Terraform + HCP + Netlify</p>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
