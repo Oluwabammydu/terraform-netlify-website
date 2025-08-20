@@ -5,7 +5,7 @@ resource "random_string" "site_name" {
 
 resource "netlify_site" "du" {
   name = "${var.site_name_prefix}-${random_string.site_name.id}"
-#   build_publish_dir = "site"
+  build_publish_dir = "site"
 
   repo {
     repo_branch = "main"
