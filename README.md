@@ -57,7 +57,7 @@ You will need to create and configure a workspace in your HCP Terraform organiza
 
 1.  **Create a New Workspace**: In your HCP Terraform dashboard, create a new workspace, selecting the **"Version control workflow"** option.
 2.  **Connect to GitHub**: Connect the workspace to your forked GitHub repository.
-3.  **Confirm Workspace**: HCP Terraform will automatically detect the Terraform configuration. The workspace name can be anything you like (e.g., `netlify-website-deploy`).
+3.  **Confirm Workspace**: HCP Terraform will automatically detect the Terraform configuration. The workspace name can be anything you like.
 
 ### 3. Set Netlify Credentials and Other Variables
 
