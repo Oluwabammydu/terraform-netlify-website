@@ -12,3 +12,8 @@ output "site_name" {
   description = "The site name used"
   value       = netlify_site.du.name
 }
+
+output "debug_site_attributes" {
+  description = "Debug - show all site attributes"
+  value = netlify_site.du
+}
