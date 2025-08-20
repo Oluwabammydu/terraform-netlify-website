@@ -7,8 +7,3 @@ output "site_url" {
   description = "The URL of the deployed site"
   value       = "https://${netlify_site.du.name}.netlify.app"
 }
-
-# output "site_url" {
-#   description = "The URL of the deployed site"
-#   value       = "https://${netlify_site.du.default_domain}"
-# }
