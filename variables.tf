@@ -16,7 +16,7 @@ variable "site_name_prefix" {
 #   default     = ""
 # }
 
-variable "github_token" {
+variable "GITHUB_TOKEN" {
   description = "Your GitHub personal access token"
   type        = string
   sensitive   = true
