@@ -3,9 +3,6 @@
 This project deploys a static website to Netlify using Terraform. It is configured to be managed remotely via a VCS-driven workflow in HCP Terraform (Terraform Cloud), ensuring a secure, collaborative, and repeatable process.
 
 
-
----
-
 ## Technologies Used 🛠️
 
 This project leverages a modern IaC and web development stack to achieve a fully automated deployment pipeline.
@@ -16,39 +13,9 @@ This project leverages a modern IaC and web development stack to achieve a fully
 * **GitHub**: Acts as the version control system for all infrastructure and website code. A `git push` to the `main` branch triggers the deployment pipeline.
 * **HTML, CSS, & JavaScript**: The foundational web technologies used to build the static website content.
 
----
 
 ## Project Structure 📁
-
-The repository is organized to separate the website's source code from the infrastructure configuration.
-Of course. Here is the complete and final README file in a single block of raw Markdown code. You can copy and paste this directly into your README.md file.
-
-Markdown
-
-# Terraform Netlify Site with Remote State
-
-This project deploys a static website to Netlify using Terraform. It is configured to be managed remotely via a VCS-driven workflow in HCP Terraform (Terraform Cloud), ensuring a secure, collaborative, and repeatable process.
-
-
-
----
-
-## Technologies Used 🛠️
-
-This project leverages a modern IaC and web development stack to achieve a fully automated deployment pipeline.
-
-* **Terraform**: The core Infrastructure as Code (IaC) tool used to define and manage the Netlify site and its configuration.
-* **HCP Terraform (Terraform Cloud)**: Provides secure remote state management, a collaborative environment, and orchestrates the VCS-driven deployment runs.
-* **Netlify**: The hosting platform for our static website, providing CI/CD, a global CDN, and easy integration with GitHub.
-* **GitHub**: Acts as the version control system for all infrastructure and website code. A `git push` to the `main` branch triggers the deployment pipeline.
-* **HTML, CSS, & JavaScript**: The foundational web technologies used to build the static website content.
-
----
-
-## Project Structure 📁
-
-The repository is organized to separate the website's source code from the infrastructure configuration.
-
+```bash
 .
 ├── .gitignore         # Specifies files for Git to ignore (e.g., local state).
 ├── index.html         # The main HTML file for the website.
@@ -60,8 +27,8 @@ The repository is organized to separate the website's source code from the infra
 ├── style.css          # CSS styles for the website.
 ├── variables.tf       # Declares input variables for customization (e.g., site name).
 └── versions.tf        # Defines required provider versions and the HCP Terraform backend.
+```
 
----
 
 ## Prerequisites
 
@@ -72,8 +39,6 @@ Before you begin, ensure you have the following:
 * **A [GitHub Account](https://github.com/join)**: Your website's source code and Terraform code should be in a GitHub repository.
 * **An [HCP Terraform (Terraform Cloud) Account](https://portal.cloud.hashicorp.com/sign-up)**: You will need a free or paid account to manage the remote state and run deployments.
 
----
-
 ## Setup and Deployment 🚀
 
 This project is designed to be run as a VCS-driven workflow in HCP Terraform.
@@ -83,9 +48,9 @@ This project is designed to be run as a VCS-driven workflow in HCP Terraform.
 First, fork this repository to your own GitHub account and then clone it to your local machine.
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-cd YOUR_REPO_NAME
-
+git clone https://github.com/Oluwabammydu/terraform-netlify-website.git
+cd terraform-netlify-website
+```
 ### 2. Connect to HCP Terraform
 
 You will need to create and configure a workspace in your HCP Terraform organization.
@@ -110,8 +75,6 @@ In your newly created HCP Terraform workspace, navigate to the **"Variables"** t
     * **Value**: Your GitHub Personal Access Token.
     * **Sensitive**: ✅ **Check this box**.
 
----
-
 ## Usage
 
 ### How to Run
@@ -127,13 +90,13 @@ While deployments are handled by HCP Terraform, you can still run plan locally t
 
 ```bash
 terraform login
-
+```
 Then, initialize your configuration and run a plan:
 
 ```bash
 terraform init
 terraform plan
-
+```
 ### Terraform Outputs
 After a successful deployment, you can find the following information in the **"Outputs"** tab of your HCP Terraform workspace:
 
@@ -145,7 +108,7 @@ You can also view a specific output from your local CLI after a deployment has f
 
 ```bash
 terraform output site_url
-
+```
 
 
 
