@@ -13,7 +13,7 @@ output "site_name" {
   value       = netlify_site.du.name
 }
 
-output "debug_site_attributes" {
-  description = "Debug - show all site attributes"
-  value = netlify_site.du
-}
+# output "debug_site_attributes" {
+#   description = "Debug - show all site attributes"
+#   value = netlify_site.du
+# }

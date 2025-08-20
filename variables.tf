@@ -4,18 +4,6 @@ variable "site_name_prefix" {
   default     = "terra-explorer"
 }
 
-# variable "site_name" {
-#   description = "Name of the Netlify site"
-#   type        = string
-#   default     = "netlify-website"
-# }
-
-# variable "site_domain" {
-#   description = "Custom domain for the site (optional)"
-#   type        = string
-#   default     = ""
-# }
-
 variable "github_token" {
   description = "GitHub personal access token"
   type        = string

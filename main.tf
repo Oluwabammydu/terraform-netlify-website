@@ -6,10 +6,6 @@ resource "random_string" "site_name" {
   special = false 
 }
 
-# locals {
-#   site_name = "${var.site_name_prefix}-${random_string.site_name.id}"
-# }
-
 resource "netlify_site" "du" {
   name = "${var.site_name_prefix}-${random_string.site_name.id}"
 
